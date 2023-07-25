@@ -12,4 +12,4 @@ sudo cp sk-new /usr/share/X11/xkb/symbols/sk
 sudo dpkg-reconfigure xkb-data
 ```
 
-The new keyboard layout will replace slovak extended backslash.
+The new keyboard layout will replace Slovak extended backslash.
