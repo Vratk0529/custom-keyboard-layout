@@ -17,3 +17,12 @@ sudo dpkg-reconfigure xkb-data
 The new keyboard layout will replace Slovak extended backslash.
 
 This keyboard layout has been tested on Ubuntu 22.04 and Ubuntu 23.04
+
+Or use the sk.sh file.
+Run:
+```
+sudo chmod +x sk.sh
+sudo ./sk.sh
+```
+
+The file will automatically download the sk-new file, which contains the keyboard layout and it will apply the keyboard layout to the system.
