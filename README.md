@@ -13,6 +13,8 @@ sudo gedit /usr/share/X11/xkb/symbols/sk
 Replace the SK keyboard layout with this and logout / reboot your PC
 ```
     include "latin"
+    include "level3(ralt_switch)"
+    
     name[Group1] = "Slovak (QWERTY, custom numbers and characters on the top)";
 
     key <TLDE>  { [ asciitilde, dead_abovering,    grave,   asciitilde ] };
@@ -72,6 +74,4 @@ Replace the SK keyboard layout with this and logout / reboot your PC
     key <AB10>	{ [     slash,   question, dead_belowdot, dead_abovedot ] };  // Modified
 
     key <SPCE>  { [     space,      space, nobreakspace, nobreakspace ] };
-
-    include "level3(ralt_switch)"
 ```
