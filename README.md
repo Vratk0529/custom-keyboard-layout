@@ -2,9 +2,7 @@
 
 This keyboard layout is a mix of the typical Slovak keyboard layout and the US keyboard layout
 
-![alt text](https://github.com/Vratk0529/custom-keyboard-layout/blob/main/Keyboard-layout-visualisation.png?raw=true)
-
-This keyboard layout has been tested on Ubuntu 22.04 and Ubuntu 23.04
+This keyboard layout has been tested on Ubuntu 22.04 and Ubuntu 23.04, arch idk what version and Ubuntu 24.10
 
 Just add this to your /usr/share/X11/xkb/symbols/sk file with:
 ```
@@ -12,23 +10,29 @@ sudo gedit /usr/share/X11/xkb/symbols/sk
 ```
 Replace the SK keyboard layout with this and logout / reboot your PC
 ```
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    // This layout conforms to a new Slovak compromise standard
+    // designed to satisfy most Unix, Windows and Mac users.
+    // 2001 by Kamil Toman <ktoman@email.cz>
     include "latin"
     include "level3(ralt_switch)"
     
     name[Group1] = "Slovak (QWERTY, custom numbers and characters on the top)";
 
-    key <TLDE>  { [ asciitilde, dead_abovering,    grave,   asciitilde ] };
+    key <TLDE>	{ [     grave, asciitilde,      notsign,      notsign ]	};
     
-    key <AE01>	{ [         1,     exclam,     NoSymbol,    NoSymbol ]	};  // Modified
-    key <AE02>	{ [         2,         at,     NoSymbol,    NoSymbol ]	};  // Modified
-    key <AE03>	{ [         3, numbersign,     NoSymbol,    NoSymbol ]	};  // Modified
-    key <AE04>	{ [         4,     dollar,     NoSymbol,    NoSymbol ]	};  // Modified
-    key <AE05>	{ [         5,    percent,     NoSymbol,    NoSymbol ]	};  // Modified
-    key <AE06>	{ [         6, asciicircum,    NoSymbol,    NoSymbol ] 	};  // Modified
-    key <AE07>	{ [         7,  ampersand,     NoSymbol,    NoSymbol ]	};  // Modified
-    key <AE08>	{ [         8,   asterisk,     NoSymbol,    NoSymbol ]	};  // Modified
-    key <AE09>	{ [         9,  parenleft,     NoSymbol,    NoSymbol ]	};  // Modified
-    key <AE10>	{ [         0, parenright,     NoSymbol,    NoSymbol ]	};  // Modified
+    key <AE01>	{ [         1,     exclam,  onesuperior,     U2081    ]	};  // Modified
+    key <AE02>	{ [         2,         at,  twosuperior,     U2082    ]	};  // Modified
+    key <AE03>	{ [         3, numbersign,threesuperior,     U2083    ]	};  // Modified
+    key <AE04>	{ [         4,     dollar, foursuperior,     U2084    ]	};  // Modified
+    key <AE05>	{ [         5,    percent, fivesuperior,     U2085    ]	};  // Modified
+    key <AE06>	{ [         6, asciicircum, sixsuperior,     U2086    ]	};  // Modified
+    key <AE07>	{ [         7,  ampersand,sevensuperior,     U2087    ]	};  // Modified
+    key <AE08>	{ [         8,   asterisk,eightsuperior,     U2088    ]	};  // Modified
+    key <AE09>	{ [         9,  parenleft, ninesuperior,     U2089    ]	};  // Modified
+    key <AE10>	{ [         0, parenright, zerosuperior,     U2080    ]	};  // Modified
     
     key <AE11>  { [     minus, underscore,   dead_acute,     NoSymbol ] } ;  // Modified
     key <AE12>  { [     equal,       plus,   dead_caron,     NoSymbol ] };  // Modified
@@ -74,4 +78,6 @@ Replace the SK keyboard layout with this and logout / reboot your PC
     key <AB10>	{ [     slash,   question, dead_belowdot, dead_abovedot ] };  // Modified
 
     key <SPCE>  { [     space,      space, nobreakspace, nobreakspace ] };
+
+};
 ```
