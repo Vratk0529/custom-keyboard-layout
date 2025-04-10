@@ -1,10 +1,10 @@
-# Cusom keyboard layout
+# Custom keyboard layout
 
 This keyboard layout is a mix of the typical Slovak keyboard layout and the US keyboard layout
 
 This keyboard layout has been tested on Ubuntu 22.04 and Ubuntu 23.04, arch latest and Ubuntu 24.10
 
-Just add this to your /usr/share/X11/xkb/symbols/sk file with:
+Just add this to your `/usr/share/X11/xkb/symbols/sk` file with:
 ```
 sudo nvim /usr/share/X11/xkb/symbols/sk
 ```
