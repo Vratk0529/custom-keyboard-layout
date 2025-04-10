@@ -77,6 +77,6 @@ xkb_symbols "basic" {
     key <AB09>	{ [    period,    greater, periodcentered,   division ]	};  // Modified
     key <AB10>	{ [     slash,   question, dead_belowdot, dead_abovedot ] };  // Modified
 
-    key <SPCE>  { [     space,      space,        U303F, nobreakspace ] };
+    key <SPCE>  { [     space,      space,        space,        space ] };
 };
 ```
